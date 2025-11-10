@@ -1,13 +1,4 @@
-# Questão 4 — Chain of Responsibility
-**Decisão de design:** Foi utilizado o padrão Chain of Responsibility para processar múltiplas validações de um documento fiscal eletrônico (NF-e) de forma encadeada. Cada validador executa uma verificação específica (Schema XML, Certificado, Regras Fiscais, Banco de Dados e SEFAZ). A cadeia implementa:
-- Validações condicionais (alguns validadores só executam se os anteriores passarem);
-- Circuit breaker, que interrompe a execução após três falhas consecutivas;
-- Rollback automático para validadores que modificam o documento (como o banco de dados);
-- Timeout individual em cada validador para evitar bloqueios.
-
-**Justificativa:** O padrão Chain of Responsibility foi escolhido porque permite encadear e organizar múltiplas validações independentes, respeitando a ordem e as dependências entre elas. Ele garante flexibilidade e baixo acoplamento entre os validadores, além de facilitar a manutenção, a adição de novas regras e o controle de fluxo dinâmico exigido pelo sistema.
-
-                                    -------------Bimestral Padrões de projeto-------------
+                                   -------------Bimestral Padrões de projeto-------------
                                     -------------Giovanna Rosa - 35874716 -------------
 
 ------------- Questão 01 -------------
